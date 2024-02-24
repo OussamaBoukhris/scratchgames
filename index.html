@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oussama's Fun Games!</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #3498db;
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+
+      .game-gallery {
+        display: flex;
+        flex-direction: column; /* Changed from wrap to column */
+        align-items: center; /* Center items horizontally */
+        margin-top: 30px;
+      }
+
+      .game-card {
+        margin: 10px;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        position: relative; /* Added for button positioning */
+      }
+
+      .game-card:hover {
+        transform: scale(1.03);
+      }
+
+      .game-card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        /* Ensuring consistent image height */
+        max-height: 200px; /* Adjust as needed */
+      }
+
+      .game-card a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #e74c3c; /* Changed to a more visible color */
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        position: absolute; /* Changed from relative */
+        bottom: 10px; /* Adjust as needed */
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+      }
+
+      .game-card a:hover:after {
+        transform: scaleY(1);
+      }
+
+      h2 {
+        color: orange;
+      }
+
+      .game-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .game-list li {
+        margin: 10px;
+        opacity: 0;
+        animation: fadeInUp 0.5s ease-in-out forwards;
+        text-align: center;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Oussama's Fun Games!</h1>
+    <h2>Ecole Les Orangers</h2>
+
+    <div class="game-gallery">
+      <div class="game-card">
+        <img src="images/fighting-cube.jpg" alt="Fighting cube game" />
+        <a href="fighting-game.html">Play Now!</a>
+      </div>
+      <div class="game-card">
+        <img src="images/football.jpg" alt="Football game" />
+        <a href="football.html">Play Now!</a>
+      </div>
+      <div class="game-card">
+        <img src="images/snake.jpg" alt="Snake game" />
+        <a href="serpent.html">Play Now!</a>
+      </div>
+    </div>
+  </body>
+</html>
